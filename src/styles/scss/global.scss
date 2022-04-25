@@ -1,0 +1,2037 @@
+// max-width: 320px (điện thoại di động, hiển thị chiều dọc)
+// max-width: 480px (điện thoại di động, hiển thị chiều ngang)
+// max-width: 600px (máy tính bảng, hiển thị chiều dọc)
+// max-width: 800px (máy tính bảng, hiển thị chiều ngang)
+// max-width: 768px (máy tính bảng loại to, hiển thị chiều dọc)
+// max-width: 1024px (máy tính bảng loại to, hiển thị chiều ngang)
+// min-width: 1025px (từ size này trở lên là danh cho desktop thông thường).
+$res_l_320 : "only screen and (max-width: 319px)";
+$res_320 : "only screen and (min-width: 320px) and (max-width: 374px)";
+$res_375 : "only screen and (min-width: 375px) and (max-width: 424px)";
+$res_425 : "only screen and (min-width: 425px) and (max-width: 767px)";
+$res_768 : "only screen and (min-width: 768px) and (max-width: 991px)";
+$res_992 : "only screen and (min-width: 992px) and (max-width: 1023px)";
+$res_1024 : "only screen and (min-width: 1024px) and (max-width: 1999px)";
+$res_1200 : "only screen and (min-width: 1200px)";
+
+@mixin responsive_l_320() {
+    @media #{$res_l_320} {
+        @content;
+    }
+}
+
+@mixin responsive_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+
+@mixin responsive_375() {
+    @media #{$res_375} {
+        @content;
+    }
+}
+
+@mixin responsive_425() {
+    @media #{$res_425} {
+        @content;
+    }
+}
+
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+
+@mixin responsive_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+
+@mixin responsive_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}
+
+
+$main_color: rgb(29, 28, 28);
+$main_light_color : rgba(59, 59, 59, 0.9);
+$opposite_color: white;
+$main_color_background : rgb(241, 240, 241);
+$color_shadow_nav: rgba(255, 255, 255, 0.286);
+$background-image: linear-gradient(45deg, rgb(241, 240, 241) 0%, rgb(247, 245, 245) 100%);
+$color_shadow_card: rgba(154, 154, 154, 0.44);
+$from : 0px ;
+$to : 0px;
+//======= public ==========
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    background-image: $background-image;
+}
+
+.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.notification{
+    margin: 24px 2px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 800;
+    color: red;
+}
+.list-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 12px;
+    padding: 2px;
+    font-size: 1.5em;
+
+    li {
+        margin: 0 4px;
+        display: inline-block;
+        width: 30px;
+        border: 1px solid #e2e2e2;
+        box-shadow: 1px 1px 3px 3px $color_shadow_nav;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+
+        a {
+            text-decoration: none;
+            color: $main_color;
+        }
+
+        &.active {
+            background-color: $main_color;
+
+            a {
+                color: $main_color_background;
+            }
+        }
+
+        &:hover {
+            background-color: $main_light_color;
+
+            & a {
+                color: $main_color_background;
+            }
+        }
+
+    }
+
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-items {
+        padding: 8px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__name {
+            font-size: 1.5em;
+            font-weight: 700;
+            padding: 6px 10px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__require {
+            padding: 0 3px;
+            color: red;
+        }
+
+        &__input {
+            width: 100%;
+            font-size: 1.5em;
+            padding: 10px;
+            background-color: transparent;
+            border: 2px solid $main_light_color;
+            border-radius: 10px;
+            height: 40px;
+        }
+
+        &--center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__button--save {
+            font-size: 1.5em;
+            font-weight: 700;
+            width: 150px;
+            height: 38px;
+            background-color: $main_color;
+            color: $opposite_color;
+            border: 2px solid $main_color;
+            border-radius: 20px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $main_light_color;
+                color: $opposite_color;
+                border: 2px solid $main_color;
+            }
+        }
+
+    }
+}
+
+
+
+//======Navigation
+
+.navigation-box {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 5px 5px $color_shadow_nav;
+
+    position: fixed;
+    z-index: 1000;
+    background-color: $main_color_background;
+
+    .logo-box {
+        font-family: cursive;
+        font-size: 4em;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__logo {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    .user-box {
+        &__icon {
+            font-size: 5em;
+        }
+
+        &__icon:hover {
+            color: $main_light_color;
+            transform: scale(1.1);
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+
+        &__avatar-box {
+
+            border: 2px solid $color_shadow_nav;
+        }
+
+        &__button--login {
+            font-size: 2em;
+            font-weight: 600;
+
+            color: $opposite_color;
+            background-color: $main_color;
+            border: 2px solid $main_color;
+            border-radius: 36px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $main_light_color;
+
+            }
+        }
+
+
+    }
+}
+
+
+.taskbar-box {
+    background-color: $main_color_background;
+    box-shadow: 4px 0 5px 5px $color_shadow_nav;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+    font-size: 1.4em;
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        padding: 24px;
+
+        .task-bar-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $main_color;
+
+            text-decoration: none;
+
+            margin: auto;
+            border-radius: 40px;
+
+
+            &--active {
+                color: $opposite_color;
+                background-color: $main_color;
+            }
+
+            &__icon {
+
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            &:hover {
+                color: $opposite_color;
+                background-color: $main_light_color;
+            }
+
+        }
+
+
+
+    }
+}
+
+//======Card
+
+
+.card-product {
+    transition: 0.2s all;
+    background-color: $main_color_background;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px 4px $color_shadow_card;
+
+    &__image-box {
+        width: auto;
+    }
+
+    &__infomation-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__infomation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__product-name {
+        font-size: 1.5em;
+        padding: 4px 0;
+    }
+
+    &__product-type {
+        font-size: 1.3em;
+        padding: 2px 4px;
+        font-weight: 400;
+    }
+
+    &__cart-box {
+        padding: 8px 2px 2px 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__product-price {
+        font-size: 3em;
+    }
+
+    &__cart-buy {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        background-color: $main_color;
+        color: $opposite_color;
+        border: 2px solid $main_color;
+        box-shadow: 1px 1px 3px 3px $color_shadow_card;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $opposite_color;
+            color: $main_color;
+
+            transform: scale(1.01)
+        }
+    }
+
+    &:hover {
+        transform: translateY(-2px)
+    }
+}
+
+
+.cart-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    &__btn-remove {
+        font-size: 1.5em;
+        cursor: pointer;
+        position: absolute;
+        color: $main_color;
+
+        &:hover {
+            color: $main_light_color;
+        }
+    }
+
+    &__image-box {
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    &__infomation-box {
+        padding: 14px;
+    }
+
+    &__infomation {
+        padding: 4px;
+    }
+
+    &__product-name {
+        margin: 6px;
+    }
+
+    &__product-size {
+        font-size: 1.2em;
+        margin: 6px 8px;
+        font-weight: 400;
+        color: $main_light_color;
+    }
+
+    &__cart-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__product-price {
+        margin: 6px 8px;
+    }
+
+    &__quantity-box {
+        font-size: 1.6em;
+        font-weight: 600;
+        margin: 6px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--minus,
+        &--plus {
+            text-shadow: 2px 2px 4px 4px $color_shadow_card;
+
+            &:hover {
+                color: $main_light_color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__quantity {
+        font-size: 1.6em;
+        margin: 0 8px;
+    }
+}
+
+.checkout-box {
+
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        padding: 8px;
+    }
+
+    &__list-details-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    &__detail-box {
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__detail-box+&__detail-box {
+        border-top: 2px solid white;
+    }
+
+    &__detail-title {
+        margin: 8px;
+        font-weight: 600;
+        font-size: 1.4em;
+    }
+
+    &__price {
+        margin: 8px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.8em;
+
+        &--quantily,
+        &--unit {
+            font-weight: 500;
+            font-size: 0.6em;
+            color: $main_light_color;
+            margin: 6px;
+        }
+
+    }
+
+    &__btn {
+        cursor: pointer;
+        margin: 24px 0;
+        width: 100%;
+        height: 48px;
+        background-color: $main_color;
+        color: $opposite_color;
+        font-size: 1.8em;
+        font-weight: 700;
+        border-radius: 25px;
+        border: 2px solid $main_color;
+
+        &:hover {
+            background-color: $main_light_color;
+        }
+    }
+
+}
+
+//======Payment
+
+
+.payment {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color_shadow_card;
+
+
+    &-box {
+        display: flex;
+    }
+
+    &-infomation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        background-color: $main_color;
+        color: $opposite_color;
+
+        &__item {
+
+            border-bottom: 1px solid $main_light_color;
+
+            .infomation-item {
+                &__name {
+                    word-spacing: 2px;
+                    font-size: large;
+
+                    &--big {
+                        font-size: 1.8em;
+                    }
+                }
+
+                &__icon {
+                    margin-right: 8px;
+
+                    &--big {
+                        font-size: 1.2em;
+                    }
+                }
+
+                &__value {
+                    padding: 8px 16px;
+
+                    &--big {
+                        font-size: 1.6em;
+                    }
+                }
+            }
+
+        }
+
+        .action-box {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .action-item {
+                cursor: pointer;
+                font-size: large;
+
+                &__icon {
+                    margin-right: 8px;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &-main {
+        background-color: $opposite_color;
+        color: $main_color;
+
+        .payment-logo {
+            &__box {
+
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 12px;
+                border-bottom: 1px solid $color_shadow_card;
+            }
+
+            &__logo {
+                font-family: cursive;
+                font-size: 2.5em;
+                font-weight: 600;
+            }
+        }
+
+        .payment-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__title {
+                font-size: xx-large;
+                font-weight: 700;
+                margin: 12px;
+            }
+
+
+            &__intruction {
+                text-align: center;
+                font-size: x-large;
+                margin: 12px;
+            }
+
+
+            &__icon {
+                margin-right: 8px;
+            }
+        }
+    }
+
+}
+
+//=========Repsonsive
+//=====================================responsive let than  320 ==============
+@include responsive_l_320 {
+    $height_nav_header: 40px;
+    $width_task_bar: 130px;
+
+    body {
+        font-size: 8px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: calc(100vw - 2*2px);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+           
+            padding-right: 0.5em;
+            width: 200px;
+
+
+            &__avatar-box {
+
+                width: 25px;
+                height: 25px;
+                margin: 10px 2px;
+            }
+
+            &__button--login {
+                width: 50px;
+                height: 25px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+        left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
+
+
+        &__container {
+            padding: 10px;
+
+            .task-bar-item {
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 260px;
+        width: 130px;
+        margin: 4px 2px;
+
+        &__image-box {
+            height: 125px;
+        }
+
+        &__infomation-box {
+            padding: 2px 2px;
+            height: calc(260px - 130px);
+        }
+
+        &__cart-buy {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    .cart-card {
+        padding: 2px;
+
+        &__btn-remove {
+            right: 25px;
+            top: 25px;
+        }
+
+        &__image-box {
+            margin: 4px;
+            width: 100px;
+            height: 100px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 100px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list,
+        &__checkout {
+            width: 100%;
+        }
+
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 10px;
+
+        &-box {
+
+            flex-direction: column-reverse;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 4px 4px;
+            width: 100%;
+            height: 30%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 6px 2px;
+        }
+
+        &-main {
+            padding: 2px;
+            width: 100%;
+            height: 70%;
+
+            .payment-container {
+                padding: 10px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    //====End payment
+}
+
+//=====================================responsive 320 - 374 ==============
+@include responsive_320 {
+    $height_nav_header: 50px;
+    $width_task_bar: 130px;
+
+    body {
+        font-size: 9px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: calc(100vw - 2*2px);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            padding-right: 0.5em;
+            width: 180px;
+
+
+            &__avatar-box {
+                width: 30px;
+                height: 30px;
+                margin: 10px 2px;
+            }
+
+            &__button--login {
+                width: 60px;
+                height: 30px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+
+        left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
+
+        &__container {
+            padding: 10px;
+
+            .task-bar-item {
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 300px;
+        width: 155px;
+        margin: 6px 2px;
+
+        &__image-box {
+            height: 155px;
+        }
+
+        &__infomation-box {
+            padding: 2px 4px;
+            height: calc(300px - 155px);
+        }
+
+        &__cart-buy {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .cart-card {
+        padding: 8px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 8px;
+            width: 130px;
+            height: 130px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 130px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list,
+        &__checkout {
+            width: 100%;
+        }
+
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 10px;
+
+        &-box {
+
+            flex-direction: column-reverse;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 4px 4px;
+            width: 100%;
+            height: 40%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 6px 2px;
+        }
+
+        &-main {
+            padding: 2px;
+            width: 100%;
+            height: 60%;
+
+            .payment-container {
+                padding: 10px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    //====End payment
+
+}
+
+//=====================================responsive 375 - 424 ==============
+@include responsive_375 {
+    $height_nav_header: 60px;
+    $width_task_bar: 130px;
+
+    body {
+        font-size: 10px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 4px;
+        margin-left: 3px;
+        margin-right: 3px;
+        width: calc(100vw - 2*3px);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            padding-right: 1em;
+            width: 180px;
+
+
+            &__avatar-box {
+
+                width: 30px;
+                height: 30px;
+                margin: 10px 2px;
+            }
+
+            &__button--login {
+                width: 80px;
+                height: 30px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+        left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
+
+        &__container {
+            padding: 10px;
+
+            .task-bar-item {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 320px;
+        width: 170px;
+        margin: 10px 4px;
+
+        &__image-box {
+            height: 150px;
+        }
+
+        &__infomation-box {
+            padding: 10px;
+            height: calc(340px - 170px);
+        }
+
+        &__cart-buy {
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    .cart-card {
+        padding: 8px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 8px;
+            width: 130px;
+            height: 130px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 130px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list,
+        &__checkout {
+            width: 100%;
+        }
+
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 10px;
+
+        &-box {
+
+            flex-direction: column-reverse;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 4px 4px;
+            width: 100%;
+            height: 40%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            padding: 6px 2px;
+        }
+
+        &-main {
+            padding: 2px;
+            width: 100%;
+            height: 60%;
+
+            .payment-container {
+                padding: 10px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    //====End payment
+}
+
+//=====================================responsive 425 - 767 ==============
+@include responsive_425 {
+    $height_nav_header: 70px;
+    $width_task_bar: 150px;
+
+    body {
+        font-size: 10px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 8px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100vw - 2*15px);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+         
+            padding-right: 1em;
+            width: 180px;
+
+
+            &__avatar-box {
+
+                width: 30px;
+                height: 30px;
+                margin: 10px 2px;
+            }
+
+            &__button--login {
+                width: 80px;
+                height: 30px;
+            }
+
+
+        }
+    }
+    
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+        left: -$width_task_bar;
+        transition: left 0.8s ;
+        &.show {        
+           left: 0 !important;
+        }
+     
+        &__container {
+            padding: 10px;
+
+            .task-bar-item {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 320px;
+        width: 180px;
+        margin: 14px 4px;
+
+        &__image-box {
+            height: 180px;
+
+        }
+
+        &__infomation-box {
+            padding: 16px 18px;
+            height: calc(320px - 180px);
+        }
+
+        &__cart-buy {
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    .cart-card {
+        padding: 8px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 8px;
+            width: 130px;
+            height: 130px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 130px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list,
+        &__checkout {
+            width: 100%;
+        }
+
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 10px;
+
+        &-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 12px 10px;
+            width: 40%;
+            height: 100%;
+        }
+
+        &__item {
+            padding: 6px 2px;
+        }
+
+        &-main {
+            padding: 6px;
+            width: 60%;
+            height: 100%;
+
+            .payment-container {
+                padding: 18px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: 240px;
+                    height: 240px;
+                }
+            }
+        }
+    }
+
+    //====End payment
+
+}
+
+//=====================================responsive 768 - 991 ==============
+@include responsive_768 {
+    $height_nav_header: 70px;
+    $width_task_bar: 140px;
+
+    body {
+        font-size: 11px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 10px;
+        margin-left: $width_task_bar;
+        margin-right: $width_task_bar;
+        width: calc(100vw - 2*$width_task_bar);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            &__icon{
+                display: none ;
+            }
+            padding-right: 2em;
+            width: 200px;
+
+            &__avatar-box {
+                width: 40px;
+                height: 40px;
+                margin: 16px;
+            }
+
+            &__button--login {
+                width: 100px;
+                height: 40px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+
+        &__container {
+            padding: 10px;
+
+            .task-bar-item {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 410px;
+        width: 220px;
+        margin: 16px 4px;
+
+        &__image-box {
+            height: 220px;
+
+        }
+
+        &__infomation-box {
+
+            padding: 16px 18px;
+            height: calc(410px - 220px);
+        }
+
+        &__cart-buy {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .cart-card {
+        padding: 8px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 8px;
+            width: 130px;
+            height: 130px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 130px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list {
+            width: 100%;
+        }
+
+        &__checkout {
+            width: 90%;
+        }
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 40px;
+
+        &-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 36px 18px;
+            width: 30%;
+            height: 100%;
+        }
+
+        &__item {
+            padding: 16px 8px;
+        }
+
+        &-main {
+            padding: 16px;
+            width: 70%;
+            height: 100%;
+
+            .payment-container {
+                padding: 18px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    //====End payment
+
+
+
+}
+
+//=====================================responsive 992 - 1023 ==============
+@include responsive_992 {
+    $height_nav_header: 90px;
+    $width_task_bar: 160px;
+
+    body {
+        font-size: 11px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 30px;
+        margin-left: $width_task_bar;
+        margin-right: $width_task_bar;
+        width: calc(100vw - 2*$width_task_bar);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            &__icon{
+                display: none ;
+            }
+            padding-right: 2em;
+            width: 230px;
+
+            &__avatar-box {
+                width: 48px;
+                height: 48px;
+                margin: 16px;
+            }
+
+            &__button--login {
+                width: 120px;
+                height: 42px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+
+        &__container {
+            padding: 16px;
+
+            .task-bar-item {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 460px;
+        width: 270px;
+        margin: 24px 4px;
+
+        &__image-box {
+            height: 280px;
+
+        }
+
+        &__infomation-box {
+
+            padding: 16px 18px;
+            height: calc(460px - 280px);
+        }
+
+        &__cart-buy {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .cart-card {
+        padding: 12px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 12px;
+            width: 150px;
+            height: 150px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 150px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list {
+            width: 100%;
+        }
+
+        &__checkout {
+            width: 80%;
+        }
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 50px;
+
+        &-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 36px 18px;
+            width: 30%;
+            height: 100%;
+        }
+
+        &__item {
+            padding: 16px 8px;
+        }
+
+        &-main {
+            padding: 16px;
+            width: 70%;
+            height: 100%;
+
+            .payment-container {
+                padding: 18px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: auto;
+                    height: 60%;
+                }
+            }
+        }
+    }
+
+    //====End payment
+
+}
+
+//=====================================responsive 1024 - 1199 ==============
+@include responsive_1024 {
+    $height_nav_header: 90px;
+    $width_task_bar: 160px;
+
+    body {
+        font-size: 11px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 30px;
+        margin-left: $width_task_bar;
+        margin-right: $width_task_bar;
+        width: calc(100vw - 2*$width_task_bar);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            &__icon{
+                display: none ;
+            }
+            padding-right: 2em;
+            width: 230px;
+
+            &__avatar-box {
+                width: 48px;
+                height: 48px;
+                margin: 16px;
+            }
+
+            &__button--login {
+                width: 120px;
+                height: 42px;
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+
+        &__container {
+            padding: 16px;
+
+            .task-bar-item {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 460px;
+        width: 270px;
+        margin: 24px 4px;
+
+        &__image-box {
+            height: 280px;
+
+        }
+
+        &__infomation-box {
+
+            padding: 16px 18px;
+            height: calc(460px - 280px);
+        }
+
+        &__cart-buy {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .cart-card {
+        padding: 12px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 12px;
+            width: 150px;
+            height: 150px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 150px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list {
+            width: 100%;
+        }
+
+        &__checkout {
+            width: 80%;
+        }
+    }
+
+    //===== End Card
+    //======Payment
+
+
+    .payment {
+        padding: 50px;
+
+        &-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 36px 18px;
+            width: 30%;
+            height: 100%;
+        }
+
+        &__item {
+            padding: 16px 8px;
+        }
+
+        &-main {
+            padding: 16px;
+            width: 70%;
+            height: 100%;
+
+            .payment-container {
+                padding: 18px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: auto;
+                    height: 60%;
+                }
+            }
+        }
+    }
+
+    //====End payment
+
+
+}
+
+//=====================================responsive more than 1200 ===========
+@include responsive_1200 {
+    $height_nav_header: 100px;
+    $width_task_bar: 230px;
+
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        margin-top: $height_nav_header;
+        padding: 60px;
+        margin-left: $width_task_bar;
+        margin-right: $width_task_bar;
+        width: calc(100vw - 2*$width_task_bar);
+    }
+
+    //======Navigation
+
+    .navigation-box {
+        height: $height_nav_header;
+
+        .user-box {
+            &__icon{
+                display: none ;
+            }
+            padding-right: 2em;
+            width: 230px;
+
+            &__avatar-box {
+                width: 50px;
+                height: 50px;
+                margin: 18px;
+            }
+
+            &__button--login {
+
+                width: 124px;
+                height: 42px;
+
+            }
+
+
+        }
+    }
+
+    //======End Navigation
+    //===TaskBar
+    .taskbar-box {
+        width: $width_task_bar;
+        top: $height_nav_header;
+
+        &__container {
+
+            padding: 24px;
+
+            .task-bar-item {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+
+    //======End TaskBar
+
+    //===== Card
+    .card-product {
+        height: 480px;
+        width: 270px;
+        margin: 24px 4px;
+
+        &__image-box {
+            height: 300px;
+
+        }
+
+        &__infomation-box {
+
+            padding: 16px 18px;
+            height: calc(480px - 300px);
+        }
+
+        &__cart-buy {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .cart-card {
+        padding: 12px;
+
+        &__btn-remove {
+            right: 30px;
+            top: 30px;
+        }
+
+        &__image-box {
+            margin: 12px;
+            width: 150px;
+            height: 150px;
+        }
+
+        &__infomation-box {
+            width: calc(100% - 150px);
+        }
+    }
+
+    .cart {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &__cart-list {
+            width: 60%;
+        }
+
+        &__checkout {
+            width: 40%;
+        }
+    }
+
+    //===== End Card
+    //======Payment
+
+    .payment {
+        padding: 60px;
+
+        &-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-infomation {
+            padding: 36px 18px;
+            width: 30%;
+            height: 100%;
+        }
+
+        &__item {
+            padding: 16px 8px;
+        }
+
+        &-main {
+            padding: 16px;
+            width: 70%;
+            height: 100%;
+
+            .payment-container {
+                padding: 18px;
+                width: 100%;
+                height: 80%;
+
+                &__qr {
+                    width: auto;
+                    height: 60%;
+                }
+            }
+        }
+    }
+
+    //====End payment
+
+}
+
+

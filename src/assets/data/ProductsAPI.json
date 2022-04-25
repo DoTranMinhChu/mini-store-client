@@ -1,0 +1,221 @@
+{
+    "size": 24,
+    "data": [
+        {
+            "id": 1,
+            "name": "NUTRIENT RICH FACIAL MOISTURIZER",
+            "type": "SUPER GREENS",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Do you feel like you need a super food smoothie for your skin? Our Nutrient Rich Facial Moisturizer is perfect for you! It is enriched with Super Greens extracts of Kale, Spirulina, Parsley and Chlorella to give your skin a nutrient boost to promote a radiant, glowing and healthy complexion. Antioxidant rich Acai, Goji Berry Extracts & Carrot Seed Oil known to fight free radicals and environmental stressors while also assisting in minimizing the appearance of fine lines. Hydrating Oils of Rosehip, Avocado and Jojoba lock moisture and nutrients into the skin.",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Super_Greens_Nutrient_Rich_Facial_Moisturiser_125ml_01_Product_Base_720x.jpg?v=1599504594"
+        },
+        {
+            "id": 2,
+            "name": "ROSE HYDRATING MIST TONER",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Calm and soothe tired skin with our alcohol-free Hydrating Mist Toner in renewing rose scent. It can be used after cleansing, before and after makeup application or any time your skin is feeling tired, stressed or overheated. Keep in the refrigerator to instantly refresh skin on hot days.",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Masterbrand_Rose_Mist_Toner_125ml_01_Product_720x.jpg?v=1599504649"
+        },
+        {
+            "id": 3,
+            "name": "HYDRATING MIST TONER",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Did you know that 1 Sukin Hydrating Mist Toner is sold every 40 seconds!? Yep- if you haven't tried it, you need to. Our alcohol-free Mist Toner blends Chamomile and Rosewater to help soothe, purify and cool your tired skin. And did we mention it is the ultimate multi use product? It can be used before and after cleansing, in the office as a 3pm pick me up, after makeup application to give you a dewy complexion or just anytime your skin is feeling stressed or overheated! TIP: Keep in the refrigerator to instantly refresh skin on hot days. It is also amazing at blending concealer under the eyes with a beauty sponge!",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Hydrating_Mist_Toner_125ml_01_Product_1080x.jpg?v=1599504641"
+        },
+        {
+            "id": 4,
+            "name": "FACIAL MOISTURIZER PUMP",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Our Signature Facial Moisturizer is our most loved moisturizer and is the perfect all rounder! It is a hydrating cream, that nourishes and softens skin through a beautiful blend of Rosehip, Avocado, Sesame Seed and Jojoba Oils. Soothing Aloe Vera refreshes the skin, while Wheat Germ and Vitamin E assist with improving texture and protecting the skin’s moisture barrier. Your skin will be left feeling nourished, smooth and healthy. TIP: If your skin is feeling a little drier than normal, add in a few drops of your favorite oil into your moisturizer.",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Facial_Moisturiser_125ml_01_Product_1080x.jpg?v=1599504612"
+        },
+        {
+            "id": 5,
+            "name": "FOAMING FACIAL CLEANSER PUMP",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Perfect for a normal to oily skin type, our Facial Foaming Cleanser is a non-drying, gentle gel cleanser that purifies the skin, without stripping it of its natural oils. Not only does it work to remove makeup, daily dirt build up and excess oils, it also helps to soothe and tighten the skin with a natural blend of Chamomile, Aloe Vera, Green Tea and Witch Hazel- win! Evening Primrose and our favorite Rosehip Oil is also added, to provide light hydration, leaving your skin soft and touchable!",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Foaming_Facial_Cleanser_125ml_01_Product_1080x.jpg?v=1599504600"
+        },
+        {
+            "id": 6,
+            "name": "MICELLAR CLEANSING WATER",
+            "type": "SIGNATURE",
+            "size": "8.46 fl oz / 250ml",
+            "infomation": "We LOVE our Micellar Water- and so do you! It was voted the Best Micellar Water at the 2017 Beauty Heaven Best in Beauty Awards and there's no questioning why! Our Natural Micellar Water is infused with gentle ingredients such as Aloe Vera which help to remove makeup and dirt build up, while soothing and purifying your base. Chamomile and Cucumber also calms the skin leaving it lightly hydrated and clean. And did we mention the calming vanilla scent? Like a dream. TIP: Micellar Water can be left on skin, there is no need to wash it off! However many like to double cleanse- where they use Micellar Water first to remove makeup, and then follow with a cleanser.",
+            "price": 10.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Micellar_Cleansing_Water_250ml_01_Product_720x.jpg?v=1599504588"
+        },
+        {
+            "id": 7,
+            "name": "CREAM CLEANSER",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Dehydrated, flaky skin? Our Cream Cleanser will be your new best friend! Not only does it work to remove makeup, oil and dirt build up on the skin, it also nourishes your skin with a blend of natural oils including Rosehip, Avocado, Sesame and Wheat Germ Oils. An infusion of Aloe Vera, Cocoa Butter, Nettle and Horsetail leave the skin feeling soothed, purified and lightly hydrated. TIP: If you're struggling with dehydrated skin, follow with our Rosehip Oil or Hydration Elixir before you moisturize",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Cream_Cleanser_125ml_01_Product_720x.jpg?v=1599504664"
+        },
+        {
+            "id": 8,
+            "name": "REVITALIZING FACIAL SCRUB",
+            "type": "SIGNATURE",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Microbeads? No way! Our Revitalizing Facial Scrub is a cream based exfoliator therefore it is perfect for normal to drier skin types! It uses gentle granules of biodegradable Bamboo Extract and Walnut Shell Powder to lightly exfoliate the skin, removing unwanted dirt and impurities. A refreshing combination of Aloe Vera and Chamomile soothes the skin while Jojoba, Sesame and Rosehip Oils hydrate to leave your complexion silky soft and smooth! TIP: If your skin is super sensitive, add some Cream Cleanser to your scrub to soften the level of exfoliation.",
+            "price": 9.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Revitalising_Facial_Scrub_125ml_01_Product_720x.jpg?v=1599504656"
+        },
+        {
+            "id": 9,
+            "name": "PURIFYING FACIAL MASK",
+            "type": "SIGNATURE",
+            "size": "3.38 fl oz / 100ml",
+            "infomation": "Our antioxidant rich, Purifying Facial Mask is made from a base of Bentonite and Red Reef Australian Kaolin Clays. The Betonite has excellent absorbing abilities to gently remove excess oils and impurities, whilst the kaolin blend mildly exfoliates and softens the skin. Soothing Aloe Vera, Rosehip and Jojoba Oils help to hydrate the face while the mask dries, leaving your skin feeling refreshed and purified once removed!",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Purifying_Facial_Masque_01_Product_2_900x.jpg?v=1599504582"
+        },
+        {
+            "id": 10,
+            "name": "eve.holt@reqres.in",
+            "type": "Eve",
+            "size": "Holt",
+            "infomation": "..",
+            "price": 1000,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Hydrating_Facial_Masque_01_Product_2_1080x.jpg?v=1599504579"
+        },
+        {
+            "id": 11,
+            "name": "ANTIOXIDANT EYE SERUM",
+            "type": "SIGNATURE",
+            "size": "1.01 fl oz / 30ml",
+            "infomation": "Did you know that fine lines around the eyes are some of the first signs of aging on the face? Fight the signs of premature aging with our fragrance free, Antioxidant Eye Serum! A blend of Plant Extracts including Aloe Vera, Cucumber and Burdock, rich in essential fatty acids offer light hydration to the delicate eye area, while oils from Rosehip, Evening Primrose and Borage help to fight the signs of aging, reduce the appearance of fine lines and improve the skin’s texture! TIP: Pump a pea sized drop of serum onto the tip of your finger and lightly pat around the eye bone and lid.",
+            "price": 15.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Antioxident_Eye_Serum_01_Product_720x.jpg?v=1599504580"
+        },
+        {
+            "id": 12,
+            "name": "MOISTURE RESTORING NIGHT CREAM",
+            "type": "SIGNATURE",
+            "size": "4.06 fl oz / 120ml",
+            "infomation": "Our Signature Moisture Restoring Night Cream is similar to our Facial Moisturizer, except it is infused with heavier natural oils to nourish and hydrate the skin while you sleep! This is through a super blend of oils and butters including Rosehip, Evening Primrose, Jojoba, Avocado & Shea Butter! Added Vitamin E and Borage, rich in essential fatty acids replenish the skin’s moisture levels improving the texture, leaving skin feeling soft and rejuvenated!",
+            "price": 15.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Signature_Moisture_Restoring_Night_Cream_120ml_01_Product_2_720x.jpg?v=1599504662"
+        },
+        {
+            "id": 13,
+            "name": "HYDRATING DAY CREAM",
+            "type": "ROSEHIP",
+            "size": "4.06 fl oz / 120ml",
+            "infomation": "Reap the amazing benefits of our Rosehip Oil within our Hydrating Day Cream! It contains a powerful blend of Rosehip Oil infused with antioxidant rich Pomegranate to help relieve dehydrated skin and prevent the signs of premature aging. Infused with the Australian Indigenous super fruit Kakadu Plum which is naturally rich in Vitamin C, this rich Day Cream encourages skin radiance, while a generous blend of active botanicals help improve the texture of skin and leaves skin feeling smooth and hydrated!",
+            "price": 17.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Rosehip_Product_4_720x.jpg?v=1599504613"
+        },
+        {
+            "id": 14,
+            "name": "NOURISHING CREAM CLEANSER",
+            "type": "ROSEHIP",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Say goodbye to dehydrated, stripped skin post cleansing! Our Rosehip infused Nourishing Cream Cleanser works to remove makeup, oil and dirt build up on the skin while also nourishing at the same time! With a blend of Rosehip & Borage Oils, our Nourishing Cream Cleanser imparts your skin with antioxidants and essential fatty acids. It also contains Indigenous Fruit Quandong Extract nourishes and an infusion of moisture rich Shea Butter, Evening Primrose Oil and Camelia Oil work to refresh, hydrate and rejuvenate tired skin.",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Sukin_Rosehip_Nourishing_Cream_cleanser_720x.jpg?v=1599504654"
+        },
+        {
+            "id": 15,
+            "name": "CERTIFIED ORGANIC",
+            "type": "ROSEHIP OIL",
+            "size": "0.85 fl oz / 25ml",
+            "infomation": "Just like liquid gold! Our Certified Organic Rosehip Oil is our holy grail, multi use product! It contains no less than 70% essential fatty acids (amazing for maintaining the healthy building blocks of the skin) and has vitamins to help soothe, soften and hydrate the skin. These nourishing properties help to reduce the appearance of scars and combat the signs of aging- win! This unique oil feeds the skin nutrients, and can be used regularly to help relieve redness due to dry/itchy skin and help maintain optimal skin health. Our fast absorbing oil leaves skin looking and feeling radiant and healthy.",
+            "price": 20.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Sukin_Rosehip_Oil-25ml-Product_720x.jpg?v=1599504623"
+        },
+        {
+            "id": 16,
+            "name": "ANTI-POLLUTION FACIAL MASK",
+            "type": "OIL BALANCING",
+            "size": "3.38 fl oz / 100ml",
+            "infomation": "Our Anti-Pollution Mask is our most popular Oil Balancing product in the range and a must have for your bathroom cupboard! It heroes Bamboo Charcoal as the key active for its purifying properties and is infused with Moringa Extract. The Charcoal helps absorb toxins and impurities which reveals purified and cleansed skin. Rooibos Tea, Willowherb and Aloe Vera revitalize and refresh blemish prone skin. Our Mask has Quince, Bilberry and Pomegranate Extracts which assist in tightening pores, reducing shine and leaving a balanced complexion. Skin is left moisturized and nourished from Avocado, Coconut and Rosehip Oils.",
+            "price": 17.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/sukin-oil-balancing-anti-pollution-mattifying-facial-masque_720x.jpg?v=1599504614"
+        },
+        {
+            "id": 17,
+            "name": "CLARIFYING FACIAL TONIC",
+            "type": "OIL BALANCING",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "If you suffer from combination or oily skin type, our Clarifying Facial Tonic is a must for your daily regimen! It is the perfect product for post-cleanse balance and refinement. A blend of White Tea and Quince Extracts assist to revitalize the appearance of oily skin, tighten pores by refining the skin texture, and help to limit shine- win! Antioxidant rich Pomegranate and Bilberry Extracts promote a balanced complexion while Aloe Vera, Chamomile and Cucumber Extracts help to soothe and calm your base. TIP: Follow with our Oil Balancing Mattifying Facial Moisturizer. If you struggle with oily or combination skin, we recommend masking with our Oil Balancing Mask once or twice a week!",
+            "price": 11.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Oil_Balancing_Clarifying_Facial_Tonic_125ml_01_Product_Base_720x.jpg?v=1599504655"
+        },
+        {
+            "id": 18,
+            "name": "PORE REFINING FACIAL SCRUB",
+            "type": "OIL BALANCING",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "Our Oil Balancing Pore Refining Facial Scrub is our most gentle facial exfoliator in our collection! It is perfect for an oily skin type, and is gentle enough to use on blemish prone skin. It assists in refreshing and improving the texture of the skin. Natural exfoliating beads from Jojoba gently polish the skin and bamboo charcoal helps keep pores clear of impurities. With Willowherb, Rooibos Tea and Coconut, the skin is left feeling soothed and hydrated.",
+            "price": 11.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Oil_Balancing_Pore_Refining_Facial_Scrub_125ml_01_Product_720x.jpg?v=1599504657"
+        },
+        {
+            "id": 19,
+            "name": "DETOXIFYING FACIAL SCRUB",
+            "type": "SUPER GREENS",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "An all time favorite at Sukin HQ is our Super Greens Detoxifying Facial Scrub! And not just because it's our scrubiest Facial Scrub, or the amazing sweet fruity scent, but because it leaves the skin so soft and glowy! It blends detoxifying Kale, Spirulina and Parsley with natural Jojoba Beads and Bamboo to polish the skin, leaving it feeling smooth and free of impurities. Added Pineapple and Licorice Root Extracts assists to balance excess oils and tone the appearance of skin!",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Super_Greens_Detoxifying_Facial_Scrub_125ml_01_Product_720x.jpg?v=1599504637"
+        },
+        {
+            "id": 20,
+            "name": "FACIAL RECOVERY SERUM",
+            "type": "SUPER GREENS",
+            "size": "1.01 fl oz / 30ml",
+            "infomation": "Want your skin to glow? Say hello to our Facial Recovery Serum! Our hydrating, nutrient filled Facial Recovery Serum has a light consistency for speedy absorption, and infuses detoxifying Super Green extracts of Kale, Spirulina and Parsley. Our nourishing Serum promotes a radiant, even skin tone, while antioxidant rich Acai and Goji Berry Extracts fight the signs of aging! Added Grape Seed Oil promotes youthful looking skin and gives your skin light hydration before applying your moisturizer.",
+            "price": 15.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Super_Greens_Facial_Recovery_Serum_30ml_01_Product_720x.jpg?v=1599504591"
+        },
+        {
+            "id": 21,
+            "name": "DETOXIFYING BIODEGRADABLE SHEET MASK",
+            "type": "SUPER GREENS",
+            "size": "0.85 fl oz / 25ml",
+            "infomation": "This mask is enriched with our Super Greens Serum featuring a blend of Kale, Spirulina, Parsley & Chlorella. With antioxidant-rich ingredients to detoxify and revitalize dull skin, leaving skin hydrated and feeling radiant. Our sheet mask is made with 100% natural Cotton fibers that will biodegrade six months after use. ",
+            "price": 5.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Super_Greens_Detoxifying_Sheet_Mask_Front_website_720x.jpg?v=1599504668"
+        },
+        {
+            "id": 22,
+            "name": "CLEANSING OIL",
+            "type": "SUPER GREENS",
+            "size": "4.23 fl oz / 125ml",
+            "infomation": "If you haven't used a Cleansing Oil before- the thought can be a little daunting and confusing! It uses the principle of like attracts like- as the oil in the cleanser binds to surface impurities to remove them once washed off. Our lightweight Cleansing Oil is perfect for normal to dehydrated skin types, and works to dissolve away makeup and dirt through a mix of Sunflower and Grapeseed Oil. A blend of Chia and Jojoba Oils leaves skin hydrated while our Super Greens blend of Kale, Parsley, Spirulina and Chlorella deliver nutrients to the skin, leaving it looking radiant and healthy!",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Super_Greens_Cleansing_Oil_125ml_01_Product_Base_720x.jpg?v=1599504610"
+        },
+        {
+            "id": 23,
+            "name": "DETOXIFYING CLAY MASK",
+            "type": "SUPER GREENS",
+            "size": "3.38 fl oz / 100ml",
+            "infomation": "Say hello to our #1 selling Sukin Facial Mask! And there's no questioning why it's a fave all around the globe. Our clay based Mask contains Kale, Goji Berry and Bentonite and is enriched with vitamins and antioxidants to detox, brighten the complexion and minimize the appearance of fine lines. Avocado, Baobab and Rosehip Oils promote an even skin tone through intensive hydration properties. Skin is left feeling replenished, youthful and glowing!",
+            "price": 12.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Sukin_Super_Greens_Detoxifying_Facial_Masque_720x.jpg?v=1599504639"
+        },
+        {
+            "id": 24,
+            "name": "RICH MOISTURE FACIAL MASK",
+            "type": "ROSEHIP",
+            "size": "3.38 fl oz / 100ml",
+            "infomation": "Our cream-based masque is richly hydrating with Rosehip, Kakadu Plum and Quandong to support even the driest of skin types. Formulated with Vitamin E, Aloe Vera, and Pomegranate to nourish and restore skin vitality.",
+            "price": 15.99,
+            "image": "https://cdn.shopify.com/s/files/1/0081/7374/8305/products/Sukin_Rosehip_Facial_Masque_720x.jpg?v=1599504675"
+        }
+    ]
+}

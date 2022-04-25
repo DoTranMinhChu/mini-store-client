@@ -1,0 +1,140 @@
+$main_color: rgb(29, 28, 28);
+$main_light_color : rgba(59, 59, 59, 0.9);
+$opposite_color: white;
+$main_color_background : rgb(255, 255, 255);
+$color_shadow_card: rgba(154, 154, 154, 0.44);
+
+.payment {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color_shadow_card;
+    padding: 80px;
+
+    &-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    &-infomation {
+        padding: 36px 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 30%;
+        height: 100%;
+        background-color: $main_color;
+        color: $opposite_color;
+
+        &__item {
+            padding: 16px 8px;
+            border-bottom: 1px solid $main_light_color;
+
+            .infomation-item {
+                &__name {
+                    word-spacing: 2px;
+                    font-size: large;
+
+                    &--big {
+                        font-size: 24px;
+                    }
+                }
+
+                &__icon {
+                    margin-right: 8px;
+
+                    &--big {
+                        font-size: 24px;
+                    }
+                }
+
+                &__value {
+                    padding: 8px 16px;
+
+                    &--big {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+        }
+
+        .action-box {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .action-item {
+                cursor: pointer;
+                font-size: large;
+
+                &__icon {
+                    margin-right: 8px;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &-main {
+        padding: 16px;
+        width: 70%;
+        height: 100%;
+        background-color: $opposite_color;
+        color: $main_color;
+
+        .payment-logo {
+            &__box {
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 12px;
+                border-bottom: 1px solid $color_shadow_card;
+            }
+
+            &__logo {
+                font-family: cursive;
+                font-size: 2.5em;
+                font-weight: 600;
+            }
+        }
+
+        .payment-container {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__title {
+                font-size: xx-large;
+                font-weight: 700;
+                margin: 12px;
+            }
+
+            &__qr {
+                width: 300px;
+                height: 300px;
+            }
+
+            &__intruction {
+                font-size: x-large;
+                margin: 12px;
+            }
+
+            &__icon {
+                margin-right: 8px;
+            }
+        }
+    }
+
+}

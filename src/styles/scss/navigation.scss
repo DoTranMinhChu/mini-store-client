@@ -1,0 +1,140 @@
+$height_nav_header : 100px;
+$width_task_bar : 230px;
+
+
+
+$main_color: rgb(29, 28, 28);
+$main_light_color : rgba(59, 59, 59, 0.9);
+$opposite_color: white;
+$main_color_background : rgb(241, 240, 241);
+$color_shadow_nav: rgba(255, 255, 255, 0.286);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navigation-box {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $height_nav_header;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 5px 5px $color_shadow_nav;
+
+    position: fixed;
+    z-index: 1000;
+    background-color: $main_color_background;
+
+    .logo-box {
+        width: calc(100vw - 2*$width_task_bar);
+        font-family: cursive;
+        font-size: 2.5em;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__logo {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    .user-box {
+        padding-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $width_task_bar;
+        height: 100%;
+
+        &__avatar-box {
+            width: 50px;
+            height: 50px;
+            margin: 18px;
+            border: 2px solid $color_shadow_nav;
+        }
+
+        &__button--login {
+            font-size: 1.2em;
+            font-weight: 600;
+            width: 124px;
+            height: 42px;
+            color: $opposite_color;
+            background-color: $main_color;
+            border: 2px solid $main_color;
+            border-radius: 36px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $main_light_color;
+            
+            }
+        }
+
+
+    }
+}
+
+
+.taskbar-box {
+    background-color: $main_color_background;
+    width: $width_task_bar;
+    box-shadow: 4px 0 5px 5px $color_shadow_nav;
+    top: 12vh;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        padding: 24px;
+
+        .task-bar-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $main_color;
+
+            text-decoration: none;
+
+            margin: auto;
+            border-radius: 40px;
+            width: 150px;
+            height: 150px;
+
+            &--active {
+                color: $opposite_color;
+                background-color: $main_color;
+            }
+
+            &__icon {
+                padding: 8px;
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            &:hover {
+                color: $opposite_color;
+                background-color: $main_light_color;
+            }
+
+        }
+
+
+
+    }
+}

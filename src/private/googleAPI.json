@@ -1,0 +1,15 @@
+{
+    "web": {
+        "client_id": "343792692774-bn0k3r41jtckk4e5k16keml7lve3ehte.apps.googleusercontent.com",
+        "project_id": "ministore-346604",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "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",
+        "javascript_origins": [
+            "http://localhost:3000",
+            "http://localhost:3001",
+            "https://dotranminhchu.github.io"
+        ]
+    }
+}
