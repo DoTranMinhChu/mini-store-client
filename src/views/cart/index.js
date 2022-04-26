@@ -2,15 +2,15 @@ import CartCard from "../../components/card/CartCard";
 import CartCheckout from "../../components/card/CartCheckout";
 import Payment from "../../components/payment/Payment";
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from "react-redux";
-import { RemoveProductToCart, IncreaseQuantityProduct, DecreaseQuantityProduct } from "../../stores/actions/carts";
+import { useDispatch, useSelector } from 'react-redux';
+
+import { RemoveProductToCart, IncreaseQuantityProduct, DecreaseQuantityProduct, Checkout } from "../../stores/actions/carts";
 
 function Cart() {
 
 
     const [isPayment, setIsPayment] = useState(false)
-    const [cartsList, setCartsList] = useState({})
+    const [cartsList, setCartsList] = useState([])
 
     const dispatch = useDispatch();
 
@@ -18,6 +18,7 @@ function Cart() {
         setCartsList(carts)
     })
     const carts = useSelector((state) => state.carts.carts)
+    const info = useSelector(state=>state.auth.infomation)
 
     const handleRemoveProductToCart = (product) => {
         dispatch(RemoveProductToCart(product))
@@ -31,7 +32,7 @@ function Cart() {
         else if (number === -1) {
             dispatch(DecreaseQuantityProduct(product));
         }
-        setCartsList({ ...carts })
+        setCartsList([...carts])
 
     }
 
@@ -39,8 +40,7 @@ function Cart() {
         setIsPayment(true)
     }
     const handleCheckout = () => {
-        // dispatch()
-        this.props.Checkout();
+        dispatch(Checkout())
         setIsPayment(false)
     }
     const handleBackPayment = () => {
@@ -50,13 +50,10 @@ function Cart() {
     let subTotal = 0
     let shipping = 4.99
     let itemNumber = 0
-    const infomationShip = 'Chu'
-    // const infomationShip = `Order value: ${total} $ 
-    // | Address: ${this.props.infomation.address} 
-    // | Phone Number: ${this.props.infomation.phoneNumber}  
-    // | Consignee: ${this.props.infomation.fullName}`;
 
 
+    console.log('check length : ', cartsList.length)
+    console.log('check list : ', cartsList)
 
     return (
         !cartsList.length ?
@@ -71,7 +68,7 @@ function Cart() {
                         {cartsList.map((product) => {
                             subTotal += product.price * product.quantity;
                             itemNumber += product.quantity;
-                            total=subTotal+shipping;
+                            total = subTotal + shipping;
                             return (
                                 <CartCard
                                     key={product._id}
@@ -91,6 +88,7 @@ function Cart() {
                             itemNumber={itemNumber} />
                     </div>
                 </div >
+            
                 {
                     isPayment &&
                     <Payment
@@ -98,7 +96,10 @@ function Cart() {
                         onBackPayment={handleBackPayment}
                         timeCountdown={600000}
                         total={total}
-                        infomation={infomationShip}
+                        infomation={`Order value: ${total} $
+                        | Address: ${info.address}
+                        | Phone Number: ${info.phoneNumber}
+                        | Consignee: ${info.fullName}`}
                         orderID={Math.floor(Math.random() * 1000000)}
                     />
                 }

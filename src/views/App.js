@@ -1,19 +1,18 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import '../styles/scss/global.scss'
+
 import NavigationHeader from '../components/navigation/NavigationHeader';
 import TaskBar from '../components/navigation/TaskBar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Body from '../components/body/Body';
 import Home from './home/index';
 import Cart from './cart/index';
-import Info from './info/Info';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useDispatch } from 'react-redux';
-import React, { useState, useEffect } from 'react';
-import { getProducts } from '../stores/actions/products';
-import { useSelector } from "react-redux";
-function App() {
+import Info from './info/index';
 
+function App() {
 
 
   return (
@@ -43,7 +42,7 @@ function App() {
           draggable={false}
           pauseOnHover
         />
-       
+
       </BrowserRouter>
     </>
 

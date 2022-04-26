@@ -11,8 +11,7 @@ function Home() {
 
     const [activePage, setActivePage] = useState(1)
     const [range, setRange] = useState({ start: 0, end: 6 })
-    const productPerPage = 6;
-    const sizelist = 24 //this.state.ProductsList.length;
+
 
     const dispatch = useDispatch();
 
@@ -20,7 +19,11 @@ function Home() {
         dispatch(getProducts());
 
     }, [dispatch])
+    
     const products = useSelector((state) => state.products.products)
+
+    const productPerPage = 6;
+    const sizelist = products.length
 
     const handlePageChange = (pageNumber) => {
         setActivePage(pageNumber)
@@ -32,7 +35,6 @@ function Home() {
         setRange(range)
 
     }
-
 
 
     return (

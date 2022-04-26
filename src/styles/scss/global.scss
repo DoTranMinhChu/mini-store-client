@@ -1273,6 +1273,9 @@ body {
             .task-bar-item {
                 width: 110px;
                 height: 110px;
+                &__title{
+                    display: none;
+                }
             }
         }
     }
@@ -1291,7 +1294,7 @@ body {
         }
 
         &__infomation-box {
-            padding: 16px 18px;
+            padding: 10px 10px;
             height: calc(320px - 180px);
         }
 
@@ -1383,7 +1386,7 @@ body {
     $width_task_bar: 140px;
 
     body {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .container {
@@ -1433,6 +1436,9 @@ body {
             .task-bar-item {
                 width: 110px;
                 height: 110px;
+                &__title{
+                    display: none;
+                }
             }
         }
     }
@@ -1545,10 +1551,10 @@ body {
 //=====================================responsive 992 - 1023 ==============
 @include responsive_992 {
     $height_nav_header: 90px;
-    $width_task_bar: 160px;
+    $width_task_bar: 170px;
 
     body {
-        font-size: 11px;
+        font-size: 10.5px;
     }
 
     .container {
@@ -1596,8 +1602,8 @@ body {
             padding: 16px;
 
             .task-bar-item {
-                width: 130px;
-                height: 130px;
+                width: 145px;
+                height: 145px;
             }
         }
     }
@@ -1708,7 +1714,7 @@ body {
 //=====================================responsive 1024 - 1199 ==============
 @include responsive_1024 {
     $height_nav_header: 90px;
-    $width_task_bar: 160px;
+    $width_task_bar: 190px;
 
     body {
         font-size: 11px;
@@ -1759,8 +1765,8 @@ body {
             padding: 16px;
 
             .task-bar-item {
-                width: 130px;
-                height: 130px;
+                width: 150px;
+                height: 150px;
             }
         }
     }
@@ -1926,8 +1932,8 @@ body {
             padding: 24px;
 
             .task-bar-item {
-                width: 150px;
-                height: 150px;
+                width: 170px;
+                height: 170px;
             }
         }
     }

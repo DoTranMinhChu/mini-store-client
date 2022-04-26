@@ -7,42 +7,27 @@ const initState = {
 }
 
 const auth = (state = initState, action) => {
-    let { carts } = state;
+    let { user,infomation } = state;
     let payload = action.payload;
     let index;
     switch (action.type) {
-        case 'ADD_TO_CART':
-            console.log("addd : ", payload)
-            let prevProduct = carts.filter((item) => item.id === payload.id);
-            if (prevProduct.length > 0) {
-                index = carts.findIndex((item) => item.id === payload.id);
-                carts[index].quantity = carts[index].quantity + 1;
-            } else {
-                payload.quantity = 1;
-                carts = [...carts, payload]
+        case 'LOGIN':
+            user = payload;
+            if (!infomation.email) {
+                infomation.email = user.email;
             }
-
-            return { ...state, carts };
-        case 'REMOVE_TO_CART':
-            carts = carts.filter((item) => item.id !== payload.id)
-            return { ...state, carts };
-        case 'INCREASE_QUANTITY_PRODUCT':
-            index = carts.findIndex((item) => item.id === payload.id);
-            carts[index].quantity = carts[index].quantity + 1;
-            return { ...state, carts };
-        case 'DECREASE_QUANTITY_PRODUCT':
-            index = carts.findIndex((item) => item.id === payload.id);
-            carts[index].quantity = carts[index].quantity - 1;
-            if (carts[index].quantity === 0) {
-                carts = carts.filter((item) => item.id !== payload.id)
-
+            if (!infomation.fullName) {
+                infomation.fullName = user.name;
             }
-            return { ...state, carts };
-
-        case 'CHECKOUT':
-            carts = [];
-
-            return { ...state, carts };
+            return { ...state, user, infomation }
+        case 'LOGOUT':
+            user = {}
+            infomation = {}
+            return { ...state, infomation, user }
+        case 'SAVE_INFOMATION':
+            console.log("save")
+            infomation = payload;
+            return { ...state, infomation }
         default:
             return state;
     }

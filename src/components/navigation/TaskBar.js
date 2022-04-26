@@ -1,8 +1,10 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCartShopping ,faUser } from '@fortawesome/free-solid-svg-icons'
-import React from "react";
 import { NavLink } from "react-router-dom"
+
 import changeClass from "../../styles/js/style";
+
 class TaskBar extends React.Component {
     render() {
         return (
