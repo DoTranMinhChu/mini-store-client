@@ -1,34 +1,29 @@
 import React from "react";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
-import { useSelector , useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 function CartCheckout(props) {
-    // const infomationShip = `Order value: ${total} $ 
-    // | Address: ${this.props.infomation.address} 
-    // | Phone Number: ${this.props.infomation.phoneNumber}  
-    // | Consignee: ${this.props.infomation.fullName}`;
+
     const auth = useSelector(state => state.auth)
 
     const handleCheckout = () => {
-        console.log("Check")
-        // props.handleCheckout();
         if (Object.keys(auth.user).length === 0) {
             const btnLogin = document.getElementById("btn-login");
             console.log(btnLogin)
             btnLogin.click();
-            console.log("Need to login to checkout")
-            // toast.warn("Need to login to checkout")
+
+            toast.warn("Need to login to checkout")
         } else if (!(auth.infomation.address || auth.infomation.phoneNumber)) {
-            console.log("Need to enter phone number and address to checkout")
-            // toast.warn("Need to enter phone number and address to checkout")
+
+            toast.warn("Need to enter phone number and address to checkout")
         } else {
             props.handleCheckout();
         }
 
 
     }
-    console.log('props : ', props)
+
 
     let { subTotal, itemNumber, shipping } = props;
     let total = subTotal + shipping;

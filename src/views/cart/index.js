@@ -14,11 +14,14 @@ function Cart() {
 
     const dispatch = useDispatch();
 
+    const carts = useSelector((state) => state.carts.carts)
+    const info = useSelector(state=>state.auth.infomation)
+    
     useEffect(() => {
         setCartsList(carts)
     })
-    const carts = useSelector((state) => state.carts.carts)
-    const info = useSelector(state=>state.auth.infomation)
+    
+  
 
     const handleRemoveProductToCart = (product) => {
         dispatch(RemoveProductToCart(product))
@@ -50,10 +53,6 @@ function Cart() {
     let subTotal = 0
     let shipping = 4.99
     let itemNumber = 0
-
-
-    console.log('check length : ', cartsList.length)
-    console.log('check list : ', cartsList)
 
     return (
         !cartsList.length ?

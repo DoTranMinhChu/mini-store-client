@@ -1,3 +1,5 @@
+import { LOGIN, LOGOUT, SAVE_INFOMATION } from '../../constant/authConstant'
+import { toast } from 'react-toastify';
 const initState = {
     user: {
 
@@ -7,11 +9,11 @@ const initState = {
 }
 
 const auth = (state = initState, action) => {
-    let { user,infomation } = state;
+    let { user, infomation } = state;
     let payload = action.payload;
     let index;
     switch (action.type) {
-        case 'LOGIN':
+        case LOGIN:
             user = payload;
             if (!infomation.email) {
                 infomation.email = user.email;
@@ -19,14 +21,16 @@ const auth = (state = initState, action) => {
             if (!infomation.fullName) {
                 infomation.fullName = user.name;
             }
+            toast.success('Successful logout')   
             return { ...state, user, infomation }
-        case 'LOGOUT':
+        case LOGOUT:
             user = {}
             infomation = {}
+            toast.success('Successful loign')
             return { ...state, infomation, user }
-        case 'SAVE_INFOMATION':
-            console.log("save")
+        case SAVE_INFOMATION:
             infomation = payload;
+            toast.success('Successfully save information')         
             return { ...state, infomation }
         default:
             return state;

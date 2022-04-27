@@ -2,22 +2,18 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch } from 'react-redux';
-import { addCart } from '../../stores/actions/products';
-import { useSelector } from "react-redux";
+import { AddCart } from '../../stores/actions/carts';
+
 function ProductCard(props) {
 
-    const [product, setProduct] = useState(props.product)
+    const [product] = useState(props.product)
 
     const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     dispatch(addCart(product));
-    // }, [dispatch])
-    const carts = useSelector((state) => state.carts.carts)
-
     const handleAddToCart = () => {
-        dispatch(addCart(product));
+        dispatch(AddCart(product));
     }
+
     return (
         <>
             <div className="card-product">
