@@ -1,4 +1,10 @@
-import { REMOVE_TO_CART, INCREASE_QUANTITY_PRODUCT, DECREASE_QUANTITY_PRODUCT, CHECKOUT ,ADD_TO_CART } from "../../constant/cartConstant"
+import {
+    REMOVE_TO_CART,
+    INCREASE_QUANTITY_PRODUCT,
+    DECREASE_QUANTITY_PRODUCT,
+    CHECKOUT,
+    ADD_TO_CART
+} from "../../constant/cartConstant"
 
 
 export const RemoveProductToCart = (product) => (dispatch) => {

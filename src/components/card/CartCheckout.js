@@ -1,7 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import { toast } from "react-toastify";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function CartCheckout(props) {
 

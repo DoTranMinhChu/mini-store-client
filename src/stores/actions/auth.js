@@ -1,4 +1,8 @@
-import { LOGIN,LOGOUT,SAVE_INFOMATION } from "../../constant/authConstant"
+import {
+    LOGIN,
+    LOGOUT,
+    SAVE_INFOMATION
+} from "../../constant/authConstant"
 
 export const Login = (user) => (dispatch) => {
     dispatch({ type: LOGIN, payload: user })

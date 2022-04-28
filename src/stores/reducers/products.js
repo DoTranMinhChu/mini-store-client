@@ -6,9 +6,8 @@ const initState = {
 
 const products = (state = initState, action) => {
 
-    let { carts, user, infomation, products } = state;
+    let { products } = state;
     let payload = action.payload;
-    let index;
     switch (action.type) {
         case 'FETCH_ALL':
             products = payload.data

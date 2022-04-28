@@ -11,7 +11,6 @@ const initState = {
 const auth = (state = initState, action) => {
     let { user, infomation } = state;
     let payload = action.payload;
-    let index;
     switch (action.type) {
         case LOGIN:
             user = payload;
